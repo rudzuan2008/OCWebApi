@@ -17,5 +17,5 @@ public partial class Refstate
 
     public virtual Refcountry Country { get; set; } = null!;
 
-    //public virtual ICollection<Refcity> Refcities { get; set; } = new List<Refcity>();
+    public virtual ICollection<Refcity> Refcities { get; set; } = new List<Refcity>();
 }

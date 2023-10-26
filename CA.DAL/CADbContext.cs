@@ -34,7 +34,7 @@ public partial class CADbContext : DbContext
 
     public virtual DbSet<Paymentgateway> Paymentgateways { get; set; }
 
-
+    public virtual DbSet<Refcity> Refcities { get; set; }
 
     public virtual DbSet<Refcountry> Refcountries { get; set; }
 
@@ -493,30 +493,30 @@ public partial class CADbContext : DbContext
                 .HasColumnName("RedirectURL");
         });
 
-        //modelBuilder.Entity<Refcity>(entity =>
-        //{
-        //    entity.HasKey(e => e.Id).HasName("PRIMARY");
+        modelBuilder.Entity<Refcity>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-        //    entity.ToTable("refcity");
+            entity.ToTable("refcity");
 
-        //    entity.HasIndex(e => e.StateId, "StateID");
+            entity.HasIndex(e => e.StateId, "StateID");
 
-        //    entity.Property(e => e.Id)
-        //        .HasColumnType("int(11) unsigned")
-        //        .HasColumnName("ID");
-        //    entity.Property(e => e.CityName).HasMaxLength(6553);
-        //    entity.Property(e => e.Dstamp)
-        //        .HasDefaultValueSql("current_timestamp()")
-        //        .HasColumnType("timestamp")
-        //        .HasColumnName("DStamp");
-        //    entity.Property(e => e.StateId)
-        //        .HasColumnType("int(11)")
-        //        .HasColumnName("StateID");
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11) unsigned")
+                .HasColumnName("ID");
+            entity.Property(e => e.CityName).HasMaxLength(6553);
+            entity.Property(e => e.Dstamp)
+                .HasDefaultValueSql("current_timestamp()")
+                .HasColumnType("timestamp")
+                .HasColumnName("DStamp");
+            entity.Property(e => e.StateId)
+                .HasColumnType("int(11)")
+                .HasColumnName("StateID");
 
-        //    entity.HasOne(d => d.State).WithMany(p => p.Refcities)
-        //        .HasForeignKey(d => d.StateId)
-        //        .HasConstraintName("StateID");
-        //});
+            entity.HasOne(d => d.State).WithMany(p => p.Refcities)
+                .HasForeignKey(d => d.StateId)
+                .HasConstraintName("StateID");
+        });
 
         modelBuilder.Entity<Refcountry>(entity =>
         {

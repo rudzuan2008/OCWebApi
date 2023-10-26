@@ -27,8 +27,8 @@ namespace MasjidKITA.Controllers.References
             var msg = "Country Data";
             try
             {
-                var refCountry = await _dbcontext.Refcountries.Where(m=>m.Id == id).FirstOrDefaultAsync();
-                return Ok(refCountry, msg);
+                //var refCountry = await _dbcontext.Refcountries.Where(m=>m.Id == id).FirstOrDefaultAsync();
+                //return Ok(refCountry, msg);
             }
             catch (Exception ex)
             {
@@ -45,14 +45,14 @@ namespace MasjidKITA.Controllers.References
             {
                 //_cf.LogConsole("Start");
                 _logger.LogError("Start here");
-                var refCountry = await _dbcontext.Refcountries
-                    .Include(s=>s.Refstates).ThenInclude(c=>c.Refcities)
-                    .ToListAsync();
-                if (refCountry != null)
-                {
-                    return Ok(refCountry, msg);
-                }
-                else return NoContent("No Record Found");
+                //var refCountry = await _dbcontext.Refcountries
+                //    .Include(s=>s.Refstates).ThenInclude(c=>c.Refcities)
+                //    .ToListAsync();
+                //if (refCountry != null)
+                //{
+                //    return Ok(refCountry, msg);
+                //}
+                //else return NoContent("No Record Found");
             }
             catch (Exception ex)
             {
