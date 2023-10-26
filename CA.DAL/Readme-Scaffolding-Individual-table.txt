@@ -1,0 +1,1 @@
+Scaffold-DbContext "server=localhost;port=3306;user=root;password=Password1;database=masjidkita;" Pomelo.EntityFrameworkCore.MySql -OutputDir "Models" -Context "TempContext" -ContextDir "." -Tables "refcity" -Namespace "CA.DAL.Models" -NoOnConfiguring -f -v
