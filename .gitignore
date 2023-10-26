@@ -8,3 +8,5 @@
 /logs
 /CA.DAL/obj
 /TE.DAL/obj
+/CA.DAL/bin/Debug/net6.0
+/TE.DAL/bin/Debug/net6.0
