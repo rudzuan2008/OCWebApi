@@ -6,3 +6,5 @@
 /WebApi/bin/Debug/net6.0
 /WebApi/obj
 /logs
+/CA.DAL/obj
+/TE.DAL/obj
